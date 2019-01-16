@@ -1,5 +1,5 @@
-# To build this image: docker build -t java19 .
-# To run this image: docker run -it java19:latest
+# To build this image: docker build -t java11 .
+# To run this image: docker run -it java11:latest
 
 FROM buildpack-deps:xenial-scm
 
@@ -12,7 +12,7 @@ RUN apt-get -y update && \
 
 RUN mkdir -p /usr/lib/jvm
 WORKDIR /usr/lib/jvm
-ADD jdk-9.0.4_linux-x64_bin.tar.gz .
+ADD jdk-11.0.2_linux-x64_bin.tar.gz .
 
 WORKDIR /tmp
 ADD update-alternatives.sh .
